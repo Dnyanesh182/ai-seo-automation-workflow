@@ -140,7 +140,6 @@ Task/
 
 ```json
 {
-  "gemini_api_key": "YOUR_KEY_HERE",
   "target_urls": [
     "https://example.com"
   ],
@@ -155,6 +154,8 @@ Task/
   ]
 }
 ```
+
+**⚠️ SECURITY NOTE:** API keys should NEVER be stored in config.json. Always use the `.env` file for API keys, which is excluded from version control by `.gitignore`.
 
 ## 📈 What Gets Analyzed?
 
@@ -389,10 +390,19 @@ For issues or questions:
 
 ## 🔐 Security Notes
 
-- Never commit `.env` file with real API keys
-- Use `.gitignore` to exclude sensitive files
-- Rotate API keys regularly
-- Keep dependencies updated
+**🚨 CRITICAL: Protecting Your API Keys**
+
+- **NEVER** commit `.env` file with real API keys to version control
+- **NEVER** put API keys in `config.json` or any other tracked files
+- **ALWAYS** use environment variables (`.env` file) for sensitive credentials
+- The `.gitignore` file excludes `.env` automatically - keep it that way
+- If you accidentally commit an API key:
+  1. Immediately revoke/regenerate the key at [Google AI Studio](https://makersuite.google.com/app/apikey)
+  2. Remove the key from git history using tools like `git-filter-repo` or BFG Repo-Cleaner
+  3. Never reuse that compromised key
+- Rotate API keys regularly (every 90 days recommended)
+- Keep dependencies updated to avoid security vulnerabilities
+- Monitor your API usage for unexpected activity
 
 ## 📝 License
 

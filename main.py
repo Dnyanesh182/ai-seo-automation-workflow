@@ -110,13 +110,14 @@ class SEOAutomation:
             print("-"*60)
             
             try:
-                # Check for API key
-                api_key = os.getenv('GEMINI_API_KEY') or self.config.get('gemini_api_key')
+                # Check for API key (only from environment variable for security)
+                api_key = os.getenv('GEMINI_API_KEY')
                 
-                if not api_key or api_key == "YOUR_GEMINI_API_KEY_HERE":
+                if not api_key:
                     print("⚠ Gemini API key not configured")
                     print("  Skipping AI insights generation")
-                    print("  To enable: Set GEMINI_API_KEY environment variable")
+                    print("  To enable: Set GEMINI_API_KEY environment variable in .env file")
+                    print("  Never commit API keys to version control!")
                     skip_ai = True
                 else:
                     generator = GeminiInsightsGenerator(api_key)
