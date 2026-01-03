@@ -4,11 +4,8 @@ __pycache__/
 *.pyo
 *.pyd
 .Python
-data/*.json
-data/*.csv
-reports/*.md
-reports/*.pdf
-reports/*.txt
+data/
+reports/
 *.log
 .vscode/
 .idea/
