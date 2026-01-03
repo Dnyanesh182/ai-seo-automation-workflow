@@ -64,12 +64,13 @@ Comprehensive guide covering everything about the system. Reference this for det
 ```json
 {
   "target_urls": ["https://your-site.com"],
-  "gemini_api_key": "your_key_here"
+  "output_directory": "reports",
+  "data_directory": "data"
 }
 ```
-**Edit this** to add your target URLs.
+**Edit this** to add your target URLs. **⚠️ NEVER put API keys here!**
 
-### **.env** - Environment Variables
+### **.env** - Environment Variables (API Keys)
 ```
 GEMINI_API_KEY=your_actual_key_here
 ```
