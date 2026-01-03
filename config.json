@@ -11,5 +11,11 @@
     "heading_structure",
     "image_optimization",
     "mobile_friendly"
-  ]
+  ],
+  "gemini_api_key_config": {
+    "note": "NEVER store your actual API key here! This is a security risk.",
+    "instructions": "Set GEMINI_API_KEY in your .env file instead",
+    "get_key_at": "https://makersuite.google.com/app/apikey",
+    "example_env_file": "GEMINI_API_KEY=your_actual_key_here"
+  }
 }
