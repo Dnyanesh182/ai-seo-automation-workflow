@@ -1,7 +1,7 @@
 {
-  "gemini_api_key": "YOUR_GEMINI_API_KEY_HERE",
+  "gemini_api_key": "AIzaSyAR1-FxMRjbDwT6dDhvffBKk7n-5Km6TaY",
   "target_urls": [
-    "https://example.com",
+    "https://www.pmc.gov.in/en/election?year=2025",
     "https://www.wikipedia.org"
   ],
   "output_directory": "reports",
